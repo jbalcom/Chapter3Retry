@@ -73,5 +73,55 @@ class Main {
         double distance = Math.sqrt(Math.exp(xCoorT - xCoorO) - Math.exp(yCoorT - yCoorO));
 
         System.out.println("The distance from (" + xCoorO + "," + yCoorO + ") and (" + xCoorT + "," + yCoorT + ") is " + distance + ".");
+
+        System.out.println("\nPP - 3.6\n");
+
+        System.out.print("Enter in the radius of a sphere: ");
+        int radius = scan.nextInt();
+        scan.nextLine();
+
+        double volume = ((4/3) * Math.PI) * Math.pow(radius, 2);
+        double surfaceArea = (4 * Math.PI) * Math.pow(radius, 2);
+
+        System.out.println("The volume of the sphere is " + volume + " and the surface area is " + surfaceArea + ".");
+
+        System.out.println("\nPP - 3.7\n");
+
+        System.out.print("This problem is the geometric series and finding the nth term.\n");
+
+        System.out.print("Enter in an integer that represents the first term: ");
+        int firstTerm = scan.nextInt();
+        scan.nextLine();
+        System.out.print("Enter in an integer that represents the common ratio: ");
+        int commonRatio = scan.nextInt();
+        scan.nextLine();
+        System.out.print("Enter in an integer that represents the value n: ");
+        int n = scan.nextInt();
+        scan.nextLine();
+
+        int nTerm = (int) (firstTerm * Math.pow(commonRatio, (n - 1)));
+        System.out.println("The nth term is: " + nTerm + ".");
+
+        System.out.println("\nPP - 3.8\n");
+
+        int randNum = randoNbr.nextInt(21) + 20;
+        int sin = (int) Math.sin(randNum);
+        int cos = (int) Math.cos(randNum);
+        int tan = (int) Math.tan(randNum);
+
+        System.out.println("The random integer chosen by the system is " + randNum + ".");
+
+        System.out.println("The sin of " + randNum + " is " + sin + ", the cos is " + cos + ", and the tan is " + tan + ".");
+
+        System.out.println("\nPP - 3.9\n");
+
+        int randoRadius = randoNbr.nextInt(21) + 1;
+        int randoHeight = randoNbr.nextInt(21) + 1;
+
+        double randoVolume = Math.PI * Math.pow(randoRadius, 2) * randoHeight;
+        double randoSurfArea = 2 * Math.PI * randoRadius * randoHeight;
+
+        System.out.println("The radius of a random cylinder is " + randoRadius + " and the height is " + randoHeight + ".");
+        System.out.println("The volume of a random cylinder is " + randoVolume + " and the surface area is " + randoSurfArea + ".");
     }
 }
